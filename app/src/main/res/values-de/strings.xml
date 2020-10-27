@@ -8,4 +8,6 @@
     <string name="snackbar_empty">Eingabe leer</string>
     <string name="history">Erledigte ToDos</string>
     <string name="clear_history">Alle Einträge entfernen</string>
+    <string name="this_list_is_empty">Diese Liste ist leer</string>
+    <string name="add_a_Todo">Erstelle dein erstes ToDo</string>
 </resources>

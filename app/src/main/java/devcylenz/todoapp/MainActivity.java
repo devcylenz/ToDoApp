@@ -20,6 +20,8 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText itemET;
     private Button addButton;
     private ListView itemsList;
+    private TextView emptyList;
 
     private ArrayList<String> items;
     private ArrayAdapter<String> adapter;
@@ -44,8 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         itemsList = findViewById(R.id.items_list);
 
         items = FileHelper.readData(this);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, items);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_checked, items);
         itemsList.setAdapter(adapter);
+
+        emptyList = findViewById(R.id.empty_list);
+        itemsList.setEmptyView(emptyList);
 
         addButton.setOnClickListener(this);
         itemsList.setOnItemClickListener(this);
@@ -90,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String itemEntered = itemET.getText().toString();
         if (itemEntered.equals("")) {
             Snackbar snackbar = Snackbar.make(findViewById(R.id.add_btn) , R.string.snackbar_empty, Snackbar.LENGTH_SHORT);
-            snackbar.setAction("X", v -> { snackbar.dismiss(); });
+            snackbar.setAction("X", v -> snackbar.dismiss());
             snackbar.show();
             return;
         }
@@ -100,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FileHelper.writeData(items, this);
 
         Snackbar snackbar = Snackbar.make(findViewById(R.id.add_btn) , R.string.item_added, Snackbar.LENGTH_SHORT);
-        snackbar.setAction("X", v -> { snackbar.dismiss(); });
+        snackbar.setAction("X", v -> snackbar.dismiss());
         snackbar.show();
     }
 
@@ -112,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FileHelper.writeData(items, this);
 
         Snackbar snackbar = Snackbar.make(findViewById(R.id.add_btn) , R.string.snackbar_done, Snackbar.LENGTH_SHORT);
-        snackbar.setAction("X", v -> { snackbar.dismiss(); });
+        snackbar.setAction("X", v -> snackbar.dismiss());
         snackbar.show();
     }
 }

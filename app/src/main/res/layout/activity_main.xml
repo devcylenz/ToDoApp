@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:imeOptions="actionDone"
-            />
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/add_btn"
@@ -42,5 +42,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:focusable="false" />
+
+    <TextView
+        android:id="@+id/empty_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/add_a_Todo"
+        android:gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
 </LinearLayout>

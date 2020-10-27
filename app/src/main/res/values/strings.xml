@@ -7,4 +7,6 @@
     <string name="snackbar_empty">Nothing entered</string>
     <string name="history">History</string>
     <string name="clear_history">Clear History</string>
+    <string name="this_list_is_empty">This list is Empty</string>
+    <string name="add_a_Todo">Add a ToDo</string>
 </resources>
