@@ -10,9 +10,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-public class FileHelper {
+public class HistoryFileHelper {
 
-    public static final String FILENAME = "listinfo.dat";
+    public static final String FILENAME = "history.dat";
 
     public static void writeData(ArrayList<String> items, Context context){
         try {
