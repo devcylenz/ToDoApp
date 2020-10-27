@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string name="enter_item">ToDo eingeben</string>
+    <string name="add">+</string>
+    <string name="item_added">Eintrag hinzugefügt</string>
+    <string name="snackbar_done">Erledigt</string>
+    <string name="snackbar_empty">Eingabe leer</string>
+</resources>

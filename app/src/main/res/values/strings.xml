@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string name="enter_item">Enter Item</string>
+    <string name="add">ADD</string>
+    <string name="item_added">Item Added</string>
+    <string name="snackbar_done">Done</string>
+    <string name="snackbar_empty">Nothing entered</string>
+</resources>
