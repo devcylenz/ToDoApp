@@ -7,13 +7,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class HistoryManager {
-    private static ListView historyList;
-
-    private static ArrayList<String> historyItems;
-    private static ArrayAdapter<String> historyAdapter;
 
     public static void addToHistory (String string, Context context) {
-        historyItems = HistoryFileHelper.readData(context);
+        ArrayList<String> historyItems = HistoryFileHelper.readData(context);
         historyItems.add(string);
         HistoryFileHelper.writeData(historyItems, context);
     }
@@ -25,9 +21,5 @@ public class HistoryManager {
     public static void emptyHistory (Context context) {
         HistoryFileHelper.writeData(new ArrayList<String>(), context);
     }
-
-
-
-
 
 }

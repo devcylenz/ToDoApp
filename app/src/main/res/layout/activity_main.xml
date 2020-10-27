@@ -21,24 +21,26 @@
             android:layout_width="0dp"
             android:layout_weight="4"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:imeOptions="actionDone"
             />
+
         <Button
             android:id="@+id/add_btn"
             android:text="@string/add"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
             />
+
     </LinearLayout>
+
     <ListView
         android:id="@+id/items_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:focusable="false"
-        >
-
-    </ListView>
+        android:focusable="false" />
 
 </LinearLayout>
