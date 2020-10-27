@@ -6,4 +6,4 @@ Features:
 * Dark mode
 * Englisch und Deutsch
 * Persistenz / Offline-Fähigkeit
-* evtl. History
+* History
