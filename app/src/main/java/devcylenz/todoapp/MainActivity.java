@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         FileHelper.writeData(items, this);
 
-        Snackbar snackbar = Snackbar.make(findViewById(R.id.add_btn) , R.string.item_added, Snackbar.LENGTH_SHORT);
+        /*Snackbar snackbar = Snackbar.make(findViewById(R.id.add_btn) , R.string.item_added, Snackbar.LENGTH_SHORT);
         snackbar.setAction("X", v -> snackbar.dismiss());
-        snackbar.show();
+        snackbar.show();*/
     }
 
     @Override
